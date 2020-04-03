@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pottermania</title>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Askovic Damnjan 174.17"/>
+	<meta name="keywords" content="Harry Potter, Hogwarts, Magic"/>
+	<meta name="language" content="English"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="http://www.fontsaddict.com/font/harry-potter.html" rel="stylesheet">
+</head>
+<body>
+<div id="omot">
+	<header>
+		<div id="pozadina">
+			<div id="glavni">
+				<div id="logo">
+					<a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+				</div>
+				<div id="meni" class="topnav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="flexmeni"><a href="index.html">Home</a></li>
+						<li><a href="hogwarts.html">Hogwarts</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li class="aktivanLink"><a href="contact.html">Contact</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    				<span class="fa fa-bars"></span>
+  					</a>
+						</li>
+					</ul>
+				</div>
+				<div id="pretraga">
+					<form action="#" method="GET">
+						<input type="text" name="tbPretraga" id="tbPretraga" placeholder="Search.." />
+						<button type="submit" id="tbDugme"> <i class="fa fa-search"></i> </button>
+					</form>
+				</div>
+				<div class="cleaner"></div>
+				<div id="prebaci">
+					<a href="#naslov" id="dugmes">Contact us</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div id="naslov">
+			<h1>"Help will always be given at Hogwarts to those who ask for it."</h1>
+		</div>
+			<div class="form-div">
+				<h2>Contact</h2>
+				<form onsubmit="return false" id="contactForm">
+					<input type="text" placeholder="Full Name" class="polja" id="fullName"></br></br>
+					<input type="text" placeholder="E-maill Adress" class="polja" id="emailContact"></br></br>
+					<input type="text" placeholder="Phone Number" class="polja" id="phoneContact"></br></br>
+					<textarea cols="47" rows="5" class="write-text" placeholder="Write us..." id="textContact"></textarea></br></br>
+					<input type="submit" name="posalji" value="Submit your message" id="submitContact" class="dugme">
+				</form>
+				<div id="validInfo" class="show-validated">
+				</div>
+			</div>
+			<div class="form-div">
+				<h2>Login</h2>
+				<form onsubmit="return false" id="loginForm">
+					<input type="text" placeholder="Username" class="polja" id="usernameLogin"></br></br>
+					<input type="password" placeholder="Password" class="polja" id="passwordLogin"></br></br>
+					<button type="submit" class="dugme" id="btnLogin">Login</button>
+				</form>
+				<div id="validLogin" class="show-validated">
+				</div>
+			</div>
+			<div class="form-div">
+				<h2>Register</h2>
+				<form onsubmit="return false" id="registerForm">
+					<input type="text" placeholder="Username" class="polja" id="usernameRegister"></br></br>
+					<input type="text" placeholder="E-maill Adress" class="polja" id="emailRegister"></br></br>
+					<input type="password" placeholder="Password" class="polja" id="passwordRegister"></br></br>
+					<input type="password" placeholder="Confirm Password" class="polja" id="confPasswordRegister"></br></br>
+					<button type="submit" class="dugme" id="btnRegister">Register</button>
+				</form>
+				<div id="validReg" class="show-validated">
+				</div>
+			</div>
+	</main>
+	<footer>
+			<div id="autor">
+				<h3 id="naslovFuter"><a href="about.html">Copyright &copy Damnjan Ašković 174/17</a></h3>
+			</div>
+			<div id="meniFuter">
+				<ul>
+					<li><a href="index.html">&#x25C6 Home</a></li>
+					<li><a href="hogwarts.html">&#x25C6 Hogwarts</a></li>
+					<li><a href="gallery.html">&#x25C6 Gallery</a></li>
+					<li class="aktivanLink"><a href="contact.html">&#x25C6 Contact  &#x25C2</a></li>
+					<li><a href="about.html">&#x25C6 About</a></li>
+				</ul>
+			</div>
+			<div id="social">
+				<ul>
+					<li><a href="https://www.facebook.com/harrypottermovie/" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/harrypotterfilm/" target="_blank"> <i class="fa fa-instagram"></i></a></li>
+					<li><a href="sitemap.xml" target="_blank"> <i class="fa fa-sitemap"></i></a></li>
+					<li><a href="less.txt" target="_blank">Less</a></li>
+					<li><a href="dokumentacija.pdf" target="_blank">Dokumentacija</i></a></li>
+				</ul>
+			</div>
+		</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+function myFunction() {
+	var x = document.getElementById("meni");
+	if (x.className === "topnav") {
+			x.className += " responsive";
+	} else {
+			x.className = "topnav";
+	}
+}
+
+var reEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var reUsername = /^[a-zA-Z0-9]{3,30}$/;
+var rePass = /^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[#?!@$%^&*\-_]).{8,}$/;
+
+function proveraKontakt() {
+	var nameContact = document.getElementById("fullName");
+	var phoneContact = document.getElementById("phoneContact");
+	var textContact = document.getElementById("textContact");
+
+	var reName = /^[A-Z][a-z]{1,11}(\s[A-Z][a-z]{1,11})+$/;
+	var rePhone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	var reText = /^[a-zA-Z0-9_ ]{3,}$/;
+
+	var nizGreske = [];
+	var nizOk = ["You have successfully sent a message: "];
+
+	if(!reName.test(nameContact.value)) {
+		nizGreske.push("You didn't enter the Name and Surname correctly!")
+	} else {
+		nizOk.push(nameContact.value);
+	}
+
+	if(!reEmail.test(emailContact.value)) {
+		nizGreske.push("You didn't enter Email correctly!")
+	} else {
+		nizOk.push(emailContact.value);
+	}
+
+	if(!rePhone.test(phoneContact.value)) {
+		nizGreske.push("You didn't enter Phone correctly!")
+	} else {
+		nizOk.push(phoneContact.value);
+	}
+
+	if(!reText.test(textContact.value)) {
+		nizGreske.push("You didn't enter your message correctly! Your message needs to have at least 3 characters!")
+	} else {
+		nizOk.push(textContact.value);
+	}
+	
+	var lista = "<ul>";
+	if(nizGreske != 0) {
+		for(var i=0; i < nizGreske.length; i++) {
+			lista += "<li style='color:#ff0000'>" + nizGreske[i] + "</li>"
+		}
+	} else {
+		for(var i=0; i < nizOk.length; i++) {
+			lista += "<li style='color:#48688a'>" + nizOk[i] + "</li>";
+			$("#contactForm").trigger("reset");
+		}
+	}
+	lista += "</ul>"
+
+	$("#validInfo").html(lista);
+}
+
+function proveraLogin() {
+	var username = document.getElementById("usernameLogin");
+	var password = document.getElementById("passwordLogin");
+
+	var nizGreske = [];
+	var nizOk = [];
+
+	if(!reUsername.test(username.value)) {
+		nizGreske.push("You didn't enter Username correctly!")
+	} else {
+		nizOk.push(username.value);
+	}
+
+	if(!rePass.test(password.value)) {
+		nizGreske.push("You didn't enter Password correctly!")
+	} else {
+		nizOk.push(password.value);
+	}
+
+	var lista = "<ul>";
+	if(nizGreske != 0) {
+		for(var i=0; i < nizGreske.length; i++) {
+			lista += "<li style='color:#ff0000'>" + nizGreske[i] + "</li>"
+		}
+	} else {
+		lista = "<li style='color:#48688a'>You have successfully logged in!</li>"
+	}
+	lista += "</ul>";
+
+	$("#loginForm").trigger("reset");
+	$("#validLogin").html(lista);
+
+}
+function proveraRegister() {
+	var username = document.getElementById("usernameRegister");
+	var password = document.getElementById("passwordRegister");
+	var confPass = document.getElementById("confPasswordRegister");
+	var email = document.getElementById("emailRegister");
+	var houseDdl = document.getElementById("ddlHouses");
+	var selectedHouse = houseDdl.options[houseDdl.selectedIndex].value;
+
+	var nizGreske = [];
+	var nizOk = [];
+
+	if(!reUsername.test(username.value)) {
+		nizGreske.push("You didn't enter Username correctly. Username must be composed of letters or numbers with a length of 3 to 30 characters!")
+	} else {
+		nizOk.push("Your username is: " + username.value);
+	}
+
+	if(!reEmail.test(email.value)) {
+		nizGreske.push("You didn't enter Email correctly!");
+	} else {
+		nizOk.push("Your email is: " + email.value);
+	}
+
+	if(selectedHouse == "0") {
+		nizGreske.push("You didn't choose a house!");
+	} else {
+		nizOk.push("You choose the house: " + selectedHouse);
+	}
+	
+	if(!rePass.test(password.value)) {
+		nizGreske.push("You didn't enter Password correctly. Password must have a large letter, a number, a special character and mustn't be shorter than 8 characters!")
+		password.value = "";
+		confPass.value = "";
+	} else if(password.value != confPass.value) {
+		nizGreske.push("You didn't enter the same password!");
+		password.value = "";
+		confPass.value = "";
+	}
+
+	var lista = "<ul>";
+	if(nizGreske != 0) {
+		for(var i=0; i < nizGreske.length; i++) {
+			lista += "<li style='color:#ff0000'>" + nizGreske[i] + "</li>"
+		}
+	} else {
+		for(var i=0; i < nizOk.length; i++) {
+			lista += "<li style='color:#48688a'>" + nizOk[i] + "</li>"
+		}
+		$("#registerForm").trigger("reset");
+	}
+	lista += "</ul>"
+	
+	$("#validReg").html(lista);
+
+
+}
+function loadHouses() {
+	var houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"];
+
+	var ispis = "<select id='ddlHouses' class='houses-select'>";
+	ispis += "<option value = 0>Select</option>";
+	for(var i=0; i < houses.length; i++) {
+		ispis += "<option value='" + houses[i] + "'>" + houses[i] + "</option>";
+	}
+	ispis += "</select></br></br>";
+
+	$("#passwordRegister").before(ispis);
+}
+window.onload = function() {
+	loadHouses();
+	document.getElementById("submitContact").addEventListener("click",proveraKontakt);
+	document.getElementById("btnLogin").addEventListener("click", proveraLogin);
+	document.getElementById("btnRegister").addEventListener("click", proveraRegister);
+}
+</script>
+</body>
+</html>
